@@ -1,0 +1,532 @@
+/*
+Created on Tue Nov 23 17:19:34 2021
+
+Project Name: Solar PV
+File: CSS sheet
+@author: HR SINGH
+*/
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+body {
+  margin: 0;
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#anchor_before_nav {
+  text-align: right;
+  display:block;
+}
+
+.header {
+  background-color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: black;
+  color: white;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: white;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: gray;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Registration Form Style */
+
+.container 
+{
+    width:600px;
+    margin:34px auto -34px;
+    border: 3px solid black ;
+}
+.head .title h1
+{
+    text-align: center;
+    font-weight: bold;
+    font-size: 43px;
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+    padding:16px 0 0 0;
+    color:white;
+}
+.head .title
+{
+    background-color: black;
+    height:83px;
+    margin: -29px 0 0 0;
+}
+
+form .first .clear
+{
+    clear:both;
+
+}
+
+ /* ------------ For Registration Page --------------*/
+ 
+.username, .company, .first, .middle, .last, .job, .email, .office, .cell, .suffix, .choose_user, .password
+{
+    margin:12px 0 13px 20px;
+    padding:12px 0 0 0;
+}
+.username label, 
+.company label, 
+.first label, 
+.middle label, 
+.last label, 
+.job label, 
+.email label, 
+.office label, 
+.cell label, 
+.suffix label, 
+.choose_user label, 
+.password label
+{
+    text-transform: capitalize;
+    font-weight:bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+.username input, 
+.company input, 
+.first input, 
+.middle input, 
+.last input, 
+.job input, 
+.email input, 
+.office input, 
+.cell input, 
+.suffix input, 
+.choose_user input, 
+.password input
+{
+    width:90%;
+    height:33px;
+    margin: 11px 0 3px 0;
+    text-transform: capitalize;
+    padding: 0 0 0 10px;
+    background-color: #D8D8D8;
+    border: none;
+}
+
+
+/* ------------ For Certificate Page --------------*/
+ 
+.certid, .certnum, .locate, .reportnum, .tsid, .productid, .certissue
+{
+    margin:12px 0 13px 20px;
+    padding:12px 0 0 0;
+}
+.certid label, 
+.certnum label, 
+.locate label, 
+.reportnum label, 
+.tsid label, 
+.productid label, 
+.certissue label, 
+{
+    text-transform: capitalize;
+    font-weight:bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+.certid input, 
+.certnum input, 
+.locate input, 
+.reportnum input, 
+.tsid input, 
+.productid input, 
+.certissue input, 
+{
+    width:90%;
+    height:33px;
+    margin: 11px 0 3px 0;
+    text-transform: capitalize;
+    padding: 0 0 0 10px;
+    background-color: #D8D8D8;
+    border: none;
+}
+
+
+/* ------------ For Client Page --------------*/
+ 
+.clientid, .clientcode, .clientname, .clienttype
+{
+    margin:12px 0 13px 20px;
+    padding:12px 0 0 0;
+}
+.clientid label, 
+.clientcode label, 
+.clientname label, 
+.clienttype label,
+{
+    text-transform: capitalize;
+    font-weight:bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+.clientid input, 
+.clientcode input, 
+.clientname input, 
+.clienttype input,
+{
+    width:90%;
+    height:33px;
+    margin: 11px 0 3px 0;
+    text-transform: capitalize;
+    padding: 0 0 0 10px;
+    background-color: #D8D8D8;
+    border: none;
+}
+
+
+/* ------------ For Location Page --------------*/
+ 
+.locationid, .clientid, .add, .city, .state, .pincode, .mobile, .fax
+{
+    margin:12px 0 13px 20px;
+    padding:12px 0 0 0;
+}
+.locationid label, 
+.clientid label, 
+.add label, 
+.city label,
+.state label, 
+.pincode label, 
+.mobile label, 
+.fax label,
+{
+    text-transform: capitalize;
+    font-weight:bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+.locationid input, 
+.clientid input, 
+.add input, 
+.city input,
+.state input, 
+.pincode input, 
+.mobile input, 
+.fax input,
+{
+    width:90%;
+    height:33px;
+    margin: 11px 0 3px 0;
+    text-transform: capitalize;
+    padding: 0 0 0 10px;
+    background-color: #D8D8D8;
+    border: none;
+}
+
+
+/* ------------ For Product Page --------------*/
+ 
+.modelnum, .mname, .celltech, .cellmanu, .cellnum, .cellseries, .cellstring, .diodenum, .prolen, .prowid, .prowei, .superstrate
+{
+    margin:12px 0 13px 20px;
+    padding:12px 0 0 0;
+}
+.modelnum label, 
+.mname label, 
+.celltech label, 
+.cellmanu label, 
+.cellnum label, 
+.cellseries label, 
+.cellstring label, 
+.diodenum label, 
+.prolen label, 
+.prowid label, 
+.prowei label, 
+.superstrate label,
+{
+    text-transform: capitalize;
+    font-weight:bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+.modelnum input, 
+.mname input, 
+.celltech input, 
+.cellmanu input, 
+.cellnum input, 
+.cellseries input, 
+.cellstring input, 
+.diodenum input, 
+.prolen input, 
+.prowid input, 
+.prowei input, 
+.superstrate input,
+{
+    width:90%;
+    height:33px;
+    margin: 11px 0 3px 0;
+    text-transform: capitalize;
+    padding: 0 0 0 10px;
+    background-color: #D8D8D8;
+    border: none;
+}
+
+
+/* ------------ For Test Standard Page --------------*/
+ 
+.stdid, .stdname, .describe, .pubdate
+{
+    margin:12px 0 13px 20px;
+    padding:12px 0 0 0;
+}
+.stdid label, 
+.stdname label, 
+.describe label, 
+.pubdate label,
+{
+    text-transform: capitalize;
+    font-weight:bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+.stdid input, 
+.stdname input, 
+.describe input, 
+.pubdate input,
+{
+    width:90%;
+    height:33px;
+    margin: 11px 0 3px 0;
+    text-transform: capitalize;
+    padding: 0 0 0 10px;
+    background-color: #D8D8D8;
+    border: none;
+}
+
+
+.submit
+{
+    margin:0 0 0 19px;
+}
+.submit input[type="submit"]
+{
+    background-color:black;
+    color:white;
+    font-weight: bold;
+    margin:0 0 20px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 25px;
+    font-size: 20px;
+    text-transform: capitalize;
+    width:160px;
+    height:33px;
+    text-align:center;
+    padding:4px 10px 2px 10px;
+}
+.submit input[type="submit"]:hover
+{
+    background-color:#D8D8D8;
+}
+form
+{
+    margin:-12px 0 0 0px;
+    background-color: white;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Login form Style*/
+
+.login {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+  font-family: 'Comfortaa', cursive;
+}
+
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  border-radius: 10px;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+}
+
+.form input {
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  border-radius: 5px;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-family: 'Comfortaa', cursive;
+}
+
+.form input:focus {
+  background: #dbdbdb;
+}
+
+.form button {
+  font-family: 'Comfortaa', cursive;
+  text-transform: uppercase;
+  outline: 0;
+  background: black;
+  width: 100%;
+  border: 0;
+  border-radius: 5px;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.form button:active {
+  background: black;
+}
+
+.form span {
+  font-size: 75px;
+  color: black;
+}
+
+
+
+
+
+
+
+
+/* --------------------- Testing and Certification ----------------*/
+.btn {
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btncontainer { 
+  height: 300px;
+  position: relative;
+  border: 3px solid black; 
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.test_standard {
+  border-color: black;
+  color: black;
+}
+
+.test_standard:hover {
+  background-color: black;
+  color: white;
+}
+
+.certificate {
+  border-color: black;
+  color: black
+}
+
+.certificate:hover {
+  background: black;
+  color: white;
+}
+
+.client {
+  border-color: black;
+  color: black;
+}
+
+.client:hover {
+  background: black;
+  color: white;
+}
+
+.location {
+  border-color: black;
+  color: black
+}
+
+.location:hover {
+  background: black;
+  color: white;
+}
+
+.product {
+  border-color: black;
+  color: black;
+}
+
+.product:hover {
+  background: black;
+  color: white;
+}
