@@ -1,0 +1,36 @@
+{% extends 'solarpv/layout/layout.html' %}
+
+{% block content %}
+<div class="head">
+            <div class="container">
+                <div class="title">
+                    <h1>Client form</h1>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="content">
+            <div class="container">
+                    <form action="storeClient" method="POST">
+                    {% csrf_token %}
+                        <div class="clientname">
+                            <label for="clientname">Client Name:</label>
+                            <div class="clear"></div>
+                            <input type="text" name="clientname" id="clientname" placeholder="enter Client name" required>
+                        </div>
+                        <div class="clienttype">
+                            <label for="clienttype">Client type:</label>
+                            <div class="clear"></div>
+                                <select id="clienttype" name="clienttype">
+                                    <option value="Dealer">Dealer</option>
+                                    <option value="Retailer">Retailer</option>
+                                    <option value="Reseller">Reseller</option>
+                                </select>
+                        </div>
+                        <div class="submit">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </form>
+            </div>
+        </div>
+{% endblock %}

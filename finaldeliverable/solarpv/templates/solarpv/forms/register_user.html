@@ -1,0 +1,96 @@
+{% extends 'solarpv/layout/layout.html' %}
+
+{% block content %}
+<div class="head">
+            <div class="container">
+                <div class="title">
+                    <h1>Register now!</h1>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="content">
+            <div class="container">
+                    <form action="storeRegister" method="post">
+                    {% csrf_token %}
+                        <div class="username">
+                            <label for="username">Username:</label>
+                            <div class="clear"></div>
+                            <input type="text" name="username" id="username" placeholder="enter User name" required>
+                        </div>
+                        <div class="company">
+                            <label for="company">Company:</label>
+                            <div class="clear"></div>
+                            <select name="company" id="company">
+                                <option>--Select available companies--</option>
+                                {% for client in clients %}
+                                    <option value="{{client.id}}">{{client.clientname}}</option>
+                                {% endfor %}
+                            <select>                            
+                        </div>
+                        <div class="first">
+                            <label for="first">first name:</label>
+                            <div class="clear"></div>
+                            <input type="text" name="first" id="first" placeholder="enter first name" required>
+                        </div>
+                        <div class="middle">
+                            <label for="middle">Middlle Name:</label>
+                            <div class="clear"></div>
+                            <input type="text" name="middle" id="middle" placeholder="enter midddle name" required>
+                        </div>
+                        <div class="last">
+                            <label for="last">last name:</label>
+                            <div class="clear"></div>
+                            <input type="text" name="last" id="last" placeholder="enter last name" required>
+                        </div>
+                        <div class="job">
+                            <label for="job">Job Title:</label>
+                            <div class="clear"></div>
+                            <input type="text" name="job" id="job" placeholder="enter Job title" required>
+                        </div>
+                        <div class="email">
+                            <label for="email">Email Address:</label>
+                            <div class="clear"></div>
+                            <input type="email" name="email" id="email" placeholder="enter email" required>
+                        </div>
+                        <div class="office">
+                            <label for="office">Office Phone:</label>
+                            <div class="clear"></div>
+                            <input type="number" name="office" id="office" placeholder="enter office number" required>
+                        </div>
+                        <div class="cell">
+                            <label for="cell">Cell Phone:</label>
+                            <div class="clear"></div>
+                            <input type="number" name="cell" id="cell" placeholder="enter cell number" required>
+                        </div>
+                        <div class="prefix">
+                            <label for="prefix">Appellation:</label>
+                            <div class="clear"></div>
+                                <select id="prefix" name="prefix">
+                                    <option value="D">Dr.</option>
+                                    <option value="Mr">Mr.</option>
+                                    <option value="Ms">Ms.</option>
+                                    <option value="Mrs">Mrs.</option>
+                                </select>
+                        </div>
+                        <div class="choose_user">
+                            <label for="choose_user">User type:</label>
+                            <div class="clear"></div>
+                                <select id="choose_user" name="choose_user">
+                                    <option value="Client">Client</option>
+                                    <option value="Staff">Staff</option>
+                                </select>
+                        </div>
+                        <div class="password">
+                            <label for="password">password:</label>
+                            <div class="clear"></div>
+                            <input type="password" name="password" id="password" placeholder="enter password" required>
+                        </div>
+                        
+                        <div class="submit">
+                            <input type="submit" value="Sign up">
+                        </div>
+                    </form>
+            </div>
+        </div>
+{% endblock %}

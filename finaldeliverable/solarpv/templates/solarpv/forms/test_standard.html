@@ -1,0 +1,37 @@
+{% extends 'solarpv/layout/layout.html' %}
+
+{% block content %}
+<div class="head">
+            <div class="container">
+                <div class="title">
+                    <h1>Test Standard form!</h1>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="content">
+            <div class="container">
+                    <form action="storeTestStandard" method='POST'>
+                    {% csrf_token %}
+                        <div class="stdname">
+                            <label for="stdname">Standard Name:</label>
+                            <div class="clear"></div>
+                            <input type="text" name="stdname" id="stdname" placeholder="enter Standard Name" required>
+                        </div>
+                        <div class="describe">
+                            <label for="describe">Description:</label>
+                            <div class="clear"></div>
+                            <input type="text" name="describe" id="describe" placeholder="enterDescription" required>
+                        </div>
+                        <div class="pubdate">
+                            <label for="pubdate">Published date:</label>
+                            <div class="clear"></div>
+                            <input type="date" name="pubdate" id="pubdate" placeholder="enter Published date" required>
+                        </div>
+                       <div class="submit">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </form>
+            </div>
+        </div>
+{% endblock %}

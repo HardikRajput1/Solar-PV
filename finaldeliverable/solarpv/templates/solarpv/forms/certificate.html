@@ -1,0 +1,82 @@
+{% extends 'solarpv/layout/layout.html' %}
+
+{% block content %}
+<div class="head">
+            <div class="container">
+                <div class="title">
+                    <h1>Certificate Detail</h1>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="content">
+            <div class="container">
+                    <form action="storeCertificate" method='POST'>
+                    {% csrf_token %}
+                        
+                        
+                        <div class="locate">
+                            <label for="locate">Location ID:</label>
+                            <div class="clear"></div>
+                            <select name="locate" id="locate">
+                                <option>--Select available --</option>
+                                {% for Location in locate %}
+                                    <option value="{{Location.id}}">{{Location.pincode}}</option>
+                                {% endfor %}
+                            <select>                            
+                        </div>
+                        
+                       <div class="user">
+                            <label for="user">User ID:</label>
+                            <div class="clear"></div>
+                            <select name="user" id="user">
+                                <option>--Select available --</option>
+                                {% for User in user %}
+                                    <option value="{{User.id}}">{{User.userid}}</option>
+                                {% endfor %}
+                            <select>                            
+                        </div>
+                        
+                        <div class="reportnum">
+                            <label for="reportnum">Report Number:</label>
+                            <div class="clear"></div>
+                            <input type="number" name="reportnum" id="reportnum" placeholder="enter Report Number" required>
+                        </div>
+                        
+                        
+                        <div class="tsid">
+                            <label for="tsid">Test Standard ID:</label>
+                            <div class="clear"></div>
+                            <select name="tsid" id="tsid">
+                                <option>--Select available --</option>
+                                {% for TestStandard in tsid %}
+                                    <option value="{{TestStandard.id}}">{{TestStandard.stdname}}</option>
+                                {% endfor %}
+                            <select>                            
+                        </div>
+                        
+                        
+                        <div class="productid">
+                            <label for="productid">Product ID:</label>
+                            <div class="clear"></div>
+                            <select name="productid" id="productid">
+                                <option>--Select available --</option>
+                                {% for Product in modelnum %}
+                                    <option value="{{Product.id}}">{{Product.modelnum}}</option>
+                                {% endfor %}
+                            <select>                            
+                        </div>
+                        
+                        
+                        <div class="certissue">
+                            <label for="certissue">Certificate issue date:</label>
+                            <div class="clear"></div>
+                            <input type="date" name="certissue" id="certissue" placeholder="enter Certificate issue date" required>
+                        </div>
+                        <div class="submit">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </form>
+            </div>
+        </div>
+{% endblock %}

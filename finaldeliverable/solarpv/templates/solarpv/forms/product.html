@@ -1,0 +1,82 @@
+{% extends 'solarpv/layout/layout.html' %}
+
+{% block content %}
+<div class="head">
+            <div class="container">
+                <div class="title">
+                    <h1>Register new product!</h1>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="content">
+            <div class="container">
+                    <form action="storeProduct" method='POST'>
+                    {% csrf_token %}
+                        <div class="modelnum">
+                            <label for="modelnum">Model number:</label>
+                            <div class="clear"></div>
+                            <input type="text" name="modelnum" id="modelnum" placeholder="enter Model number:" required>
+                        </div>
+                        <div class="mname">
+                            <label for="mname">Model Name:</label>
+                            <div class="clear"></div>
+                            <input type="text" name="mname" id="mname" placeholder="enter Name:" required>
+                        </div>
+                        <div class="celltech">
+                            <label for="celltech">Cell Technology:</label>
+                            <div class="clear"></div>
+                            <input type="text" name="celltech" id="celltech" placeholder="enter cell technology" required>
+                        </div>
+                        <div class="cellmanu">
+                            <label for="cellmanu">Cell Manufacture:</label>
+                            <div class="clear"></div>
+                            <input type="text" name="cellmanu" id="cellmanu" placeholder="enter cell manufacturer" required>
+                        </div>
+                        <div class="cellnum">
+                            <label for="cellnum">Number of cell:</label>
+                            <div class="clear"></div>
+                            <input type="number" name="cellnum" id="cellnum" placeholder="enter number of cell" required>
+                        </div>
+                        <div class="cellseries">
+                            <label for="cellseries">Number of cell series:</label>
+                            <div class="clear"></div>
+                            <input type="number" name="cellseries" id="cellseries" placeholder="enter number of cell series" required>
+                        </div>
+                        <div class="cellstring">
+                            <label for="cellstring">Number of series string </label>
+                            <div class="clear"></div>
+                            <input type="number" name="cellstring" id="cellstring" placeholder="enter number of series string" required>
+                        </div>
+                        <div class="diodenum">
+                            <label for="diodenum">Number of diodes:</label>
+                            <div class="clear"></div>
+                            <input type="number" name="diodenum" id="diodenum" placeholder="enter number of diodes" required>
+                        </div>
+                        <div class="prolen">
+                            <label for="prolen">Product length:</label>
+                            <div class="clear"></div>
+                            <input type="number" name="prolen" id="prolen" placeholder="enter product length" required>
+                        </div>
+                        <div class="prowid">
+                            <label for="prowid">Product width:</label>
+                            <div class="clear"></div>
+                            <input type="number" name="prowid" id="prowid" placeholder="enter product width" required>
+                        </div>
+                        <div class="prowei">
+                            <label for="prowei">Product weight:</label>
+                            <div class="clear"></div>
+                            <input type="number" name="prowei" id="prowei" placeholder="enter product weight" required>
+                        </div>
+                        <div class="superstrate">
+                            <label for="superstrate">Superstrate type:</label>
+                            <div class="clear"></div>
+                            <input type="text" name="superstrate" id="superstrate" placeholder="enter superstrate type" required>
+                        </div>
+                        <div class="submit">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </form>
+            </div>
+        </div>
+{% endblock %}
