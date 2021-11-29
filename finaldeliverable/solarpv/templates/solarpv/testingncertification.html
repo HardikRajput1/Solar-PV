@@ -1,0 +1,27 @@
+{% extends 'solarpv/layout/layout.html' %}
+
+{% block content %}
+<div class="head">
+            <div class="container">
+                <div class="title">
+                    <h1>Testing and Certification</h1>
+                </div>
+            </div>
+        </div><br/><br/><br/><br/>
+
+<div class="btncontainer">
+    <div class="center">
+        <b><h4 align='center'>Search for a Certificate</h4></b><br />
+        <form align='center'>
+            <input type="text" placeholder="Search by report number" name="search">
+            <button type="submit">Submit</button>
+        </form><br />
+        <b><h2 align='center'>Form</h2></b>
+        <a href="certificate"><button class="btn certificate" >Certificate</button></a>
+        <a href="client"><button class="btn client">Client</button></a>
+        <a href="location"><button class="btn location">Location</button></a>
+        <a href="product"><button class="btn product">Product</button></a>
+        <a href="teststandard"><button class="btn test_standard">Test Standard</button></a>
+    </div>
+</div>
+{% endblock %}
